@@ -1,0 +1,9 @@
+- name: Copy configuration file
+  hosts: web_servers
+  become: true
+  tasks:
+    - name: Copy configuration file
+      copy:
+        src: /path/to/local/file.conf
+        dest: /path/on/remote/file.conf
+

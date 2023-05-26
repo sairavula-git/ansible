@@ -1,0 +1,11 @@
+- name: Copy directory
+  hosts: app_servers
+  become: true
+  tasks:
+    - name: Copy directory
+      copy:
+        src: /path/to/local/directory/
+        dest: /path/on/remote/directory/
+        remote_src: yes
+        recursive: yes
+
