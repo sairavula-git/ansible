@@ -1,0 +1,7 @@
+- name: Print variable value
+  hosts: all
+  tasks:
+    - name: Debug variable
+      debug:
+        var: my_variable
+

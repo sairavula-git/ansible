@@ -1,0 +1,11 @@
+- name: Debug output of a task
+  hosts: app_servers
+  tasks:
+    - name: Run a task
+      shell: echo "Hello, Ansible!"
+      register: output
+
+    - name: Debug task output
+      debug:
+        var: output.stdout
+
