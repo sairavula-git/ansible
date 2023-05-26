@@ -1,0 +1,1 @@
+The ec2 module can be used to manage Amazon EC2 instances in Ansible playbooks. We can customize the parameters such as key_name, instance_type, image, region, count, vpc_subnet_id, and assign_public_ip based on specific requirements.

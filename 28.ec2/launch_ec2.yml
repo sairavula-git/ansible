@@ -1,0 +1,20 @@
+- name: Launch EC2 instance
+  hosts: localhost
+  connection: local
+  gather_facts: False
+  tasks:
+    - name: Create EC2 instance
+      ec2:
+        key_name: mykey
+        instance_type: t2.micro
+        image: ami-12345678
+        region: us-east-1
+        count: 1
+        vpc_subnet_id: subnet-12345678
+        assign_public_ip: yes
+        wait: yes
+      register: ec2_instance
+    - name: Display instance details
+      debug:
+        var: ec2_instance
+

@@ -1,0 +1,14 @@
+- name: Stop EC2 instance
+  hosts: localhost
+  connection: local
+  gather_facts: False
+  tasks:
+    - name: Stop instance
+      ec2:
+        instance_ids: i-12345678
+        state: stopped
+      register: stop_result
+    - name: Display stop result
+      debug:
+        var: stop_result
+
