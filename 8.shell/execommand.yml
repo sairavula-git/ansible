@@ -1,0 +1,7 @@
+- name: Execute shell command
+  hosts: web_servers
+  become: true
+  tasks:
+    - name: Execute command
+      shell: echo "Hello, Ansible!"
+

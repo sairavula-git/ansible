@@ -1,0 +1,12 @@
+- name: Capture command output
+  hosts: db_servers
+  become: true
+  tasks:
+    - name: Capture command output
+      shell: cat /path/to/file.txt
+      register: file_output
+
+    - name: Print command output
+      debug:
+        var: file_output.stdout
+
