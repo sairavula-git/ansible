@@ -1,0 +1,11 @@
+- name: Remove option from INI file
+  hosts: all
+  become: true
+  tasks:
+    - name: Remove option
+      ini_file:
+        path: /etc/myapp.conf
+        section: mysection
+        option: myoption
+        state: absent
+

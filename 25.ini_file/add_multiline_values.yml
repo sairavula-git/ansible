@@ -1,0 +1,14 @@
+- name: Update INI file with multiline value
+  hosts: all
+  become: true
+  tasks:
+    - name: Add or update multiline value
+      ini_file:
+        path: /etc/myapp.conf
+        section: mysection
+        option: myoption
+        value: |
+          line1
+          line2
+          line3
+

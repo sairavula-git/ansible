@@ -1,0 +1,1 @@
+The ini_file module in Ansible is used to manage INI-style configuration files. We can customize the path, section, option, value, and other parameters based on our specific configuration file requirements.
