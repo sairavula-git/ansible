@@ -1,0 +1,9 @@
+- name: Stop MySQL service
+  hosts: db_servers
+  become: true
+  tasks:
+    - name: Stop MySQL service
+      service:
+        name: mysql
+        state: stopped
+
