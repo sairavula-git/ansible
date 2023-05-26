@@ -1,0 +1,9 @@
+- name: Execute command with arguments
+  hosts: app_servers
+  become: true
+  tasks:
+    - name: Execute command with arguments
+      command: echo "Welcome, {{ username }}!"
+      vars:
+        username: "John"
+
