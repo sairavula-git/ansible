@@ -1,0 +1,9 @@
+- name: Clone Git repository
+  hosts: web_servers
+  become: true
+  tasks:
+    - name: Clone repository
+      git:
+        repo: https://github.com/example/repository.git
+        dest: /path/on/remote/repository
+

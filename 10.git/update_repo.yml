@@ -1,0 +1,9 @@
+- name: Update Git repository
+  hosts: app_servers
+  become: true
+  tasks:
+    - name: Update repository
+      git:
+        repo: /path/on/remote/repository
+        update: yes
+

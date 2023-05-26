@@ -1,0 +1,10 @@
+- name: Checkout Git branch
+  hosts: db_servers
+  become: true
+  tasks:
+    - name: Checkout branch
+      git:
+        repo: /path/on/remote/repository
+        version: branch_name
+        dest: /path/on/remote/checkout_directory
+
