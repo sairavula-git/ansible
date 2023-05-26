@@ -1,0 +1,1 @@
+The yum_repository module in Ansible is used to manage YUM repositories on Red Hat-based systems. We can customize the repository name, base URL, state (present or absent), and other options based on your specific requirements.

@@ -1,0 +1,11 @@
+- name: Update YUM repository
+  hosts: db_servers
+  become: true
+  tasks:
+    - name: Update repository
+      yum_repository:
+        name: myrepo
+        baseurl: http://example.com/repo
+        enabled: yes
+        gpgcheck: yes
+        gpgkey: http://example.com/repo/RPM-GPG-KEY

@@ -1,0 +1,9 @@
+- name: Remove YUM repository
+  hosts: app_servers
+  become: true
+  tasks:
+    - name: Remove repository
+      yum_repository:
+        name: oldrepo
+        state: absent
+
