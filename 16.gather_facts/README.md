@@ -1,0 +1,2 @@
+The gather_facts module in Ansible is used to collect information about the target hosts. By default, Ansible automatically gathers facts at the beginning of each playbook run. However, you can also explicitly enable or disable fact gathering using the gather_facts module.
+Explicitly enabling or disabling fact gathering using the gather_facts module gives you more control over when and how facts are collected.

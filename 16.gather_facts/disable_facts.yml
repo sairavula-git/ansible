@@ -1,0 +1,8 @@
+- name: Skip fact gathering
+  hosts: db_servers
+  gather_facts: false
+  tasks:
+    - name: Perform tasks without facts
+      debug:
+        msg: "Tasks executed without gathering facts"
+
