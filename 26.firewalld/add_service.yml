@@ -1,0 +1,11 @@
+- name: Add service to firewalld
+  hosts: all
+  become: true
+  tasks:
+    - name: Add service
+      firewalld:
+        service: http
+        zone: public
+        state: enabled
+        permanent: yes
+

@@ -1,0 +1,10 @@
+- name: Open port in firewalld
+  hosts: all
+  become: true
+  tasks:
+    - name: Open port
+      firewalld:
+        port: 8080/tcp
+        state: enabled
+        permanent: yes
+

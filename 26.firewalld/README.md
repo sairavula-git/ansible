@@ -1,0 +1,1 @@
+The firewalld module in Ansible is used to manage firewalld firewall rules on Linux systems. We can customize the port, service, zone, state, and other parameters based on specific firewall configuration requirements.
