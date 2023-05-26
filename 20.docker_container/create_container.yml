@@ -1,0 +1,12 @@
+- name: Create Docker container
+  hosts: docker_hosts
+  become: true
+  tasks:
+    - name: Create container
+      docker_container:
+        name: mycontainer
+        image: nginx:latest
+        state: started
+        ports:
+          - "80:80"
+

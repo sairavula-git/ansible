@@ -1,0 +1,1 @@
+The docker_container module in Ansible is used to manage Docker containers. We can customize the container name, image, state (started, stopped, or absent), ports, and other options based on your specific Docker container management requirements.

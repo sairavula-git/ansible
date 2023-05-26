@@ -1,0 +1,9 @@
+- name: Remove Docker container
+  hosts: docker_hosts
+  become: true
+  tasks:
+    - name: Remove container
+      docker_container:
+        name: mycontainer
+        state: absent
+
