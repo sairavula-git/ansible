@@ -1,0 +1,1 @@
+The get_url module in Ansible is used to download files from remote locations. We can customize the URL, destination path, headers, timeout, checksum, and other options based on your specific file download requirements.

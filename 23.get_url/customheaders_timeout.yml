@@ -1,0 +1,11 @@
+- name: Download file with headers
+  hosts: all
+  become: true
+  tasks:
+    - name: Download file
+      get_url:
+        url: http://example.com/file.tar.gz
+        dest: /tmp/file.tar.gz
+        headers:
+          Authorization: "Bearer {{ access_token }}"
+        timeout: 60
