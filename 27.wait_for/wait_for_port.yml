@@ -1,0 +1,10 @@
+- name: Wait for port availability
+  hosts: all
+  become: true
+  tasks:
+    - name: Wait for port
+      wait_for:
+        host: localhost
+        port: 8080
+        state: started
+

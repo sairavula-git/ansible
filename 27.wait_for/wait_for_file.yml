@@ -1,0 +1,9 @@
+- name: Wait for file existence
+  hosts: all
+  become: true
+  tasks:
+    - name: Wait for file
+      wait_for:
+        path: /path/to/file.txt
+        state: present
+
