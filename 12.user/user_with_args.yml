@@ -1,0 +1,11 @@
+- name: Create user with custom UID and home directory
+  hosts: app_servers
+  become: true
+  tasks:
+    - name: Create user
+      user:
+        name: myuser
+        uid: 1001
+        home: /home/myuser
+        state: present
+

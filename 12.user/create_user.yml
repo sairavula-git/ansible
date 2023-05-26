@@ -1,0 +1,9 @@
+- name: Create user account
+  hosts: web_servers
+  become: true
+  tasks:
+    - name: Create user
+      user:
+        name: myuser
+        state: present
+

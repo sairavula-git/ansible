@@ -1,0 +1,9 @@
+- name: Remove user account
+  hosts: db_servers
+  become: true
+  tasks:
+    - name: Remove user
+      user:
+        name: myuser
+        state: absent
+
