@@ -1,0 +1,2 @@
+command module can be used to execute commands on remote hosts.
+the main difference between the command and shell modules is that the command module executes commands directly without shell processing, while the shell module allows you to utilize shell-specific features. It's generally recommended to use the command module when possible to avoid potential shell-related issues, unless you specifically need shell functionality.

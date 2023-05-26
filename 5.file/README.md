@@ -1,0 +1,1 @@
+ file module can be used to manage files and directories in Ansible playbooks. We can customize the paths, ownership, permissions, and state (such as present or absent) based on your specific requirements.
