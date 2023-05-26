@@ -1,0 +1,9 @@
+- name: Add configuration line
+  hosts: web_servers
+  become: true
+  tasks:
+    - name: Add line to configuration file
+      lineinfile:
+        path: /path/on/remote/file.conf
+        line: 'additional_config_line'
+

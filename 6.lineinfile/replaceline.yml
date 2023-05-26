@@ -1,0 +1,10 @@
+- name: Replace configuration line
+  hosts: db_servers
+  become: true
+  tasks:
+    - name: Replace line in configuration file
+      lineinfile:
+        path: /path/on/remote/file.conf
+        regexp: '^old_config_line$'
+        line: 'new_config_line'
+

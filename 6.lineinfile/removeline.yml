@@ -1,0 +1,10 @@
+- name: Remove configuration line
+  hosts: app_servers
+  become: true
+  tasks:
+    - name: Remove line from configuration file
+      lineinfile:
+        path: /path/on/remote/file.conf
+        state: absent
+        regexp: '^unwanted_config_line$'
+
