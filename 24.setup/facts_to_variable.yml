@@ -1,0 +1,9 @@
+- name: Gather facts and store in variable
+  hosts: all
+  tasks:
+    - name: Gather facts
+      setup:
+    - name: Display gathered facts
+      debug:
+        var: ansible_facts
+

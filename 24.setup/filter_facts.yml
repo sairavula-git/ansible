@@ -1,0 +1,7 @@
+- name: Gather specific facts
+  hosts: all
+  tasks:
+    - name: Gather specific facts
+      setup:
+        filter: ansible_distribution, ansible_os_family
+
