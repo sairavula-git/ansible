@@ -1,0 +1,9 @@
+- name: Remove MySQL
+  hosts: db_servers
+  become: true
+  tasks:
+    - name: Remove MySQL package
+      yum:
+        name: mysql-server
+        state: absent
+
