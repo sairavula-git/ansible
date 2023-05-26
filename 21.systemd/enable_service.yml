@@ -1,0 +1,10 @@
+- name: Enable service on boot
+  hosts: app_servers
+  become: true
+  tasks:
+    - name: Enable service
+      systemd:
+        name: myservice
+        state: started
+        enabled: yes
+

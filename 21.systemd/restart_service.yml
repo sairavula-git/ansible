@@ -1,0 +1,7 @@
+- name: Restart service
+  hosts: app_servers
+  become: true
+  tasks:
+    - name: Restart service
+      systemd:
+        name: myservice

@@ -1,0 +1,9 @@
+- name: Start service
+  hosts: app_servers
+  become: true
+  tasks:
+    - name: Start service
+      systemd:
+        name: myservice
+        state: started
+

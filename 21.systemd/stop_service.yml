@@ -1,0 +1,9 @@
+- name: Stop service
+  hosts: app_servers
+  become: true
+  tasks:
+    - name: Stop service
+      systemd:
+        name: myservice
+        state: stopped
+
