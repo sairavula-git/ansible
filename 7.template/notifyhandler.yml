@@ -1,0 +1,16 @@
+- name: Render template and notify handler
+  hosts: db_servers
+  become: true
+  tasks:
+    - name: Render template
+      template:
+        src: /path/to/template.j2
+        dest: /path/on/remote/file.conf
+      notify: restart_database_service
+
+  handlers:
+    - name: Restart database service
+      service:
+        name: database
+        state: restarted
+

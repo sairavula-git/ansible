@@ -1,0 +1,9 @@
+- name: Render template file
+  hosts: web_servers
+  become: true
+  tasks:
+    - name: Render template
+      template:
+        src: /path/to/template.j2
+        dest: /path/on/remote/file.conf
+

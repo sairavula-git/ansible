@@ -1,0 +1,10 @@
+- name: Render template with custom permissions
+  hosts: app_servers
+  become: true
+  tasks:
+    - name: Render template with custom permissions
+      template:
+        src: /path/to/template.j2
+        dest: /path/on/remote/file.conf
+        mode: '0644'
+
