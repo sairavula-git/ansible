@@ -1,0 +1,10 @@
+- name: Add cron job
+  hosts: web_servers
+  become: true
+  tasks:
+    - name: Add cron job
+      cron:
+        name: "My Cron Job"
+        job: "path/to/command"
+        cron_file: my_cron_job
+

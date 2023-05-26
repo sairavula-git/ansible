@@ -1,0 +1,12 @@
+- name: Modify cron job schedule
+  hosts: db_servers
+  become: true
+  tasks:
+    - name: Modify cron job
+      cron:
+        name: "My Cron Job"
+        cron_file: my_cron_job
+        job: "new_command"
+        minute: "0"
+        hour: "2"
+

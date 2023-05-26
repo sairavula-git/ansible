@@ -1,0 +1,9 @@
+- name: Remove cron job
+  hosts: app_servers
+  become: true
+  tasks:
+    - name: Remove cron job
+      cron:
+        name: "My Cron Job"
+        cron_file: my_cron_job
+        state: absent
