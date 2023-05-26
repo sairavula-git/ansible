@@ -1,0 +1,1 @@
+The win_updates module in Ansible is used to manage Windows updates on Windows hosts. Note that the win_updates module requires the pywinrm Python package to be installed on the control machine running Ansible. Make sure to have the necessary dependencies installed before using this module.

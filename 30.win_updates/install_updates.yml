@@ -1,0 +1,17 @@
+- name: Install Windows updates
+  hosts: windows_hosts
+  gather_facts: false
+  tasks:
+    - name: Check for available updates
+      win_updates:
+        category_names: SecurityUpdates
+        state: searched
+      register: updates_result
+
+    - name: Install updates
+      win_updates:
+        category_names: SecurityUpdates
+        state: installed
+        reboot: yes
+      when: updates_result.updates | length > 0
+
