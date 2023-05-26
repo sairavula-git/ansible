@@ -1,0 +1,1 @@
+The package module in Ansible is used to manage packages on different Linux distributions. We can customize the package names, states, and other options based on your specific package management requirements and the package manager used by your Linux distribution.

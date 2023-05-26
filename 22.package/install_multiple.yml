@@ -1,0 +1,12 @@
+- name: Install packages
+  hosts: all
+  become: true
+  tasks:
+    - name: Install packages
+      package:
+        name:
+          - package1
+          - package2
+          - package3
+        state: present
+
