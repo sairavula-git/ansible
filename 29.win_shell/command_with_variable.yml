@@ -1,0 +1,9 @@
+- name: Execute command with variables on Windows host
+  hosts: windows_hosts
+  gather_facts: false
+  vars:
+    my_variable: "world"
+  tasks:
+    - name: Run command with variable
+      win_shell: echo "Hello, {{ my_variable }}!"
+

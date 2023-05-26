@@ -1,0 +1,10 @@
+- name: Execute multiple commands on Windows host
+  hosts: windows_hosts
+  gather_facts: false
+  tasks:
+    - name: Run commands
+      win_shell:
+        cmd: |
+          echo "Command 1"
+          echo "Command 2"
+
