@@ -1,0 +1,11 @@
+- name: Set file permissions and ownership
+  hosts: app_servers
+  become: true
+  tasks:
+    - name: Set file permissions and ownership
+      file:
+        path: /path/on/remote/file.txt
+        owner: appuser
+        group: appgroup
+        mode: '0644'
+

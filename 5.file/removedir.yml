@@ -1,0 +1,9 @@
+- name: Remove file or directory
+  hosts: db_servers
+  become: true
+  tasks:
+    - name: Remove file or directory
+      file:
+        path: /path/on/remote/file.txt
+        state: absent
+

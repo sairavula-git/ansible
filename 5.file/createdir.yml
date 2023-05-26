@@ -1,0 +1,9 @@
+- name: Create directory
+  hosts: web_servers
+  become: true
+  tasks:
+    - name: Create directory
+      file:
+        path: /path/on/remote/directory/
+        state: directory
+
