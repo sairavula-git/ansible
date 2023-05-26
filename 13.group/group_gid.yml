@@ -1,0 +1,9 @@
+- name: Create group
+  hosts: web_servers
+  become: true
+  tasks:
+    - name: Create group
+      group:
+        name: mygroup
+        state: present
+

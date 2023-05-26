@@ -1,0 +1,9 @@
+- name: Remove group
+  hosts: db_servers
+  become: true
+  tasks:
+    - name: Remove group
+      group:
+        name: mygroup
+        state: absent
+
