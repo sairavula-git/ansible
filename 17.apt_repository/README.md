@@ -1,0 +1,1 @@
+The apt_repository module in Ansible is used to manage APT repositories on Debian-based systems. Customize the repository URL, state (present or absent), and other options based on your specific requirements.

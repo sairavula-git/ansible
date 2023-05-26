@@ -1,0 +1,9 @@
+- name: Add APT repository
+  hosts: web_servers
+  become: true
+  tasks:
+    - name: Add repository
+      apt_repository:
+        repo: "deb http://example.com/repo stable main"
+        state: present
+

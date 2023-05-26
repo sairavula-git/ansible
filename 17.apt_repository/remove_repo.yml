@@ -1,0 +1,9 @@
+- name: Remove APT repository
+  hosts: app_servers
+  become: true
+  tasks:
+    - name: Remove repository
+      apt_repository:
+        repo: "deb http://old-repo.example.com/repo stable main"
+        state: absent
+

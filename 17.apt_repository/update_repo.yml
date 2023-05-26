@@ -1,0 +1,10 @@
+- name: Update APT repository
+  hosts: db_servers
+  become: true
+  tasks:
+    - name: Update repository
+      apt_repository:
+        repo: "deb http://example.com/repo stable main"
+        state: present
+        update_cache: yes
+
